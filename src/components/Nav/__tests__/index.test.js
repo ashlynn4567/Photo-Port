@@ -5,22 +5,41 @@ import "@testing-library/jest-dom/extend-expect";
 import Nav from "..";
 
 
-// 2. configure the testing environment =========================================== //
+// 2. mocks ======================================================================= //
+const categories = [
+    {
+        name: "portraits", 
+        description: "Portraits of people in my life"
+    }
+];
+const mockCurrentCategory = jest.fn();
+const mockSetCurrentCategory = jest.fn();
+
+
+// 3. configure the testing environment =========================================== //
 // after each test, remove any leftover memory data that could give us false results
 afterEach(cleanup);
 
 
-// 3. tests ======================================================================= //
+// 4. tests ======================================================================= //
 // declare the component we're testing - Nav
 describe("Nav component", () => {
     // baseline test - verify that the component is rendering
     it("renders", () => {
-        render(<Nav />);
+        render(<Nav 
+            categories={categories}
+            setCurrentCategory={mockSetCurrentCategory}
+            currentCategory={mockCurrentCategory}
+        />);
     });
 
     // snapshot test - compare snapshot of the DOM node structure
     it("matches snapshot", () => {
-        const { asFragment } = render(<Nav />);
+        const { asFragment } = render(<Nav 
+            categories={categories}
+            setCurrentCategory={mockSetCurrentCategory}
+            currentCategory={mockCurrentCategory}
+        />);
 
         expect(asFragment()).toMatchSnapshot();
     });
@@ -30,7 +49,11 @@ describe("Nav component", () => {
 describe("emoji is visible", () => {
     it("inserts emoji into the h2", () => {
         // query to return the element containing the emoji
-        const { getByLabelText } = render(<Nav />);
+        const { getByLabelText } = render(<Nav 
+            categories={categories}
+            setCurrentCategory={mockSetCurrentCategory}
+            currentCategory={mockCurrentCategory}
+        />);
 
         expect(getByLabelText("camera")).toHaveTextContent("📸");
     });
@@ -40,7 +63,11 @@ describe("emoji is visible", () => {
 describe("links are visible", () => {
     it("inserts text into the links", () => {
         // query by test id
-        const { getByTestId } = render(<Nav />);
+        const { getByTestId } = render(<Nav 
+            categories={categories}
+            setCurrentCategory={mockSetCurrentCategory}
+            currentCategory={mockCurrentCategory}
+        />);
 
         expect(getByTestId("link")).toHaveTextContent("Oh Snap!");
         expect(getByTestId("about")).toHaveTextContent("About Me");
