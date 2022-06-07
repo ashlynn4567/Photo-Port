@@ -6,21 +6,22 @@ import About from "..";
 
 
 // 2. configure the testing environment =========================================== //
-// after each test, we won't have any leftover memory data that could give us false results
+// after each test, remove any leftover memory data that could give us false results
 afterEach(cleanup);
 
 
 // 3. tests ======================================================================= //
-// declare the component we're testing
+// declare the component we're testing - About
 describe("About component", () => {
-    // baseline test to verify that the component is rendering
+    // baseline test - verify that the component is rendering
     it("renders", () => {
         render(<About />);
     });
 
-    // compare snapshot of the DOM node structure
+    // snapshot test - compare snapshot of the DOM node structure
     it("matches snapshot DOM node structure", () => {
         const { asFragment } = render(<About />);
+        
         expect(asFragment()).toMatchSnapshot();
     });
 });
