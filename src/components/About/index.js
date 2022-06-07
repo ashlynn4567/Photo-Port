@@ -1,6 +1,8 @@
+// imports
 import React from 'react';
 import coverImage from "../../assets/cover/cover-image.jpg";
 
+// About component
 function About() {
   return (
     <section className="my-5">
@@ -10,4 +12,5 @@ function About() {
   );
 };
 
+// exports
 export default About;
