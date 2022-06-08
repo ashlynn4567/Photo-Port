@@ -23,20 +23,18 @@ function App() {
       description: "Fields, farmhouses, waterfalls, and the beauty of nature",
     },
   ]);
-  console.log(categories[0])
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
   const [contactSelected, setContactSelected] = useState(false);
-  console.log(currentCategory)
 
   return (
     <div>
-      <Nav>
+      <Nav
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
-      </Nav>
+      ></Nav>
       <main>
         {!contactSelected ? (
           <>
