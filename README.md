@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Photo-Port
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Available Scripts
+## Table-of-Contents
 
-In the project directory, you can run:
+- [Description](#description)
+- [Deployed Site](#deployed-site)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Future Development](#future-development)
+- [Credits](#credits)
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Photo Port is a React-based single page application (SPA) that uses react state, props, hooks, and reusable UI components to provide a simple yet sleek user experience. This webpage features a photographer's portfolio work, so that they can show off their work and reach more potential clients.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployed Site
 
-### `npm test`
+Follow [this link](https://ashlynn4567.github.io/Photo-Port/) to view and use my site!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+This is how the webpage appears to viewers. It is responsive, adapting to multiple screen sizes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center">
+<img alt="A screenshot of the 'About' section of this react-based photography portfolio." src="./assets/images/photo-port-screenshot.jpg"/>
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This application is a single-page application (SPA), meaning that each section will conditionally render based off of the status of the virtual DOM. Instead of creating multiple HTML pages, there are reusable react components that appear based on what hte user currently has selected.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For example, if users click on the "contact" section, the gallery disappears. In the same way, clicking on any of the navigation links changes the view of the page without redirecting the webpage entirely. 
 
-### `npm run eject`
+<p align="center">
+<img alt="[insert later]" src="./assets/images/photo-port-demo.gif"/>
+</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- CSS
+- JavaScript
+- React.js
+- Jest-Dom
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Future Development
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In the future, I would like to add the following improvements:
 
-## Learn More
+- Because of the way this application is deployed, the "Oh Snap" home link in the top left corner is not routed to the correct relative path. This bug needs fixed.
+- I would like to figure out how to conditionally render the page so that the "About" section disappears when a gallery is selected, and the "Gallery" disappears when the about section is selected.
+- I would like to adopt more styling features to this site so that users can interact more fully with each picture in the gallery.
+- I would also like to adopt my own portfolio site that uses react components, state, and props to conditionally render a SPA similarly to this one.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I'm always interested in refactoring code to improve it's functionality. If you would like to suggest your own improvements, you can reach me at the links below.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- <a href="mailto:ashlynn4567@gmail.com">Email</a>
+- <a href="https://github.com/ashlynn4567">GitHub</a>
+- <a href="https://www.linkedin.com/in/ashley-lynn-smith/">LinkedIn</a>
 
-### Code Splitting
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project was built with the help of the University of Oregon's Coding Boot Camp.
 
-### Analyzing the Bundle Size
+## Licensing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The application is covered under the following license: [MIT](https://opensource.org/licenses/MIT)
